@@ -1,0 +1,16 @@
+{
+  "name": "Pranto Dey Portfolio",
+  "short_name": "Pranto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08111f",
+  "theme_color": "#4FA3FF",
+  "description": "AI Systems Engineer Portfolio",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

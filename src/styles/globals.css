@@ -1,0 +1,451 @@
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top right,#12385b 0%,transparent 28%),
+
+    radial-gradient(circle at bottom left,#081a33 0%,transparent 30%),
+
+    #070C15;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+img{
+
+display:block;
+
+max-width:100%;
+
+}
+
+button{
+
+font-family:inherit;
+
+cursor:pointer;
+
+border:none;
+
+outline:none;
+
+}
+
+
+/* LAYOUT */
+
+.container{
+
+width:min(92%,var(--container));
+
+margin:auto;
+
+}
+
+.section{
+
+padding:120px 0;
+
+}
+
+.section-title{
+
+font-size:clamp(2.4rem,5vw,4rem);
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+.section-subtitle{
+
+max-width:700px;
+
+font-size:1.1rem;
+
+color:var(--muted);
+
+margin-bottom:60px;
+
+}
+
+::selection{
+
+    background:#53B8FF;
+
+    color:white;
+
+}
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07101c;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#49B8FF;
+
+    border-radius:20px;
+
+}
+
+.service-card,
+.project-card,
+.tech-card,
+.contact-card,
+.highlight,
+.glass-card{
+
+transition:
+
+transform .35s ease,
+
+box-shadow .35s ease,
+
+border-color .35s ease;
+
+}
+
+.service-card:hover,
+.project-card:hover,
+.tech-card:hover,
+.contact-card:hover,
+.highlight:hover,
+.glass-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 60px rgba(91,182,255,.18);
+
+}
+
+.mouse-glow{
+position:fixed;
+
+width:600px;
+height:600px;
+
+pointer-events:none;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+radial-gradient(circle,
+rgba(90,170,255,.16) 0%,
+rgba(90,170,255,.08) 30%,
+transparent 70%);
+
+filter:blur(80px);
+
+z-index:0;
+
+transition:
+left .08s linear,
+top .08s linear;
+}
+
+#root{
+position:relative;
+isolation:isolate;
+}
+
+.background-grid{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-2;
+
+background:
+
+linear-gradient(
+rgba(255,255,255,.035) 1px,
+transparent 1px),
+
+linear-gradient(
+90deg,
+rgba(255,255,255,.035) 1px,
+transparent 1px);
+
+background-size:60px 60px;
+
+animation:gridMove 30s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+from{
+
+background-position:0 0;
+
+}
+
+to{
+
+background-position:60px 60px;
+
+}
+
+}
+
+.particle{
+
+position:fixed;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#5ab0ff;
+
+box-shadow:
+
+0 0 20px #5ab0ff,
+
+0 0 40px #5ab0ff;
+
+opacity:.5;
+
+pointer-events:none;
+
+z-index:-1;
+
+animation:float 14s linear infinite;
+
+}
+
+.p1{
+
+left:8%;
+top:90%;
+
+animation-delay:0s;
+
+}
+
+.p2{
+
+left:22%;
+top:100%;
+
+animation-delay:2s;
+
+}
+
+.p3{
+
+left:40%;
+top:94%;
+
+animation-delay:4s;
+
+}
+
+.p4{
+
+left:63%;
+top:102%;
+
+animation-delay:6s;
+
+}
+
+.p5{
+
+left:81%;
+top:95%;
+
+animation-delay:8s;
+
+}
+
+.p6{
+
+left:93%;
+top:100%;
+
+animation-delay:10s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:
+translateY(0)
+scale(.8);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.4;
+
+}
+
+80%{
+
+opacity:.4;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+.glass{
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.04));
+
+backdrop-filter:blur(24px);
+
+-webkit-backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.45),
+
+inset 0 1px rgba(255,255,255,.08);
+
+border-radius:24px;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
+}
+
+.glass::before{
+
+content:"";
+
+position:absolute;
+
+left:-50%;
+
+top:0;
+
+width:50%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.12),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+transition:.8s;
+
+}
+.glass:hover{
+
+transform:
+
+translateY(-10px);
+
+border-color:
+
+rgba(90,176,255,.45);
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.5),
+
+0 0 60px rgba(90,176,255,.12);
+
+}
+.glass:hover{
+
+transform:
+
+translateY(-10px);
+
+border-color:
+
+rgba(90,176,255,.45);
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.5),
+
+0 0 60px rgba(90,176,255,.12);
+
+}

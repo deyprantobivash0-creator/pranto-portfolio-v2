@@ -1,0 +1,72 @@
+.primary-btn,
+.secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 34px;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+    cursor:pointer;
+}
+
+.primary-btn{
+
+    background:linear-gradient(135deg,#6BC8FF,#38A5FF);
+
+    color:#06111f;
+
+    font-weight:700;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 45px rgba(74,183,255,.35);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 30px 70px rgba(74,183,255,.45);
+
+}
+
+.btn-arrow{
+
+    transition:.35s;
+
+}
+
+.primary-btn:hover .btn-arrow{
+
+    transform:translateX(6px);
+
+}
+
+.secondary-btn{
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:white;
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.secondary-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+    transform:translateY(-5px);
+
+}

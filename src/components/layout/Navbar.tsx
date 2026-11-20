@@ -32,7 +32,7 @@ export default function Navbar() {
             projects
            </a>
 
-           <a href="#Tech Stack" className="nav-link">
+           <a href="#tech" className="nav-link">
              Tech Stack
            </a>
 
